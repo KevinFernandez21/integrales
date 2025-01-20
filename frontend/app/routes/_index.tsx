@@ -2,7 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Calculator from "../components/Calculator";
-import {Outlet} from "@remix-run/react";
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,8 +16,7 @@ export default function Index() {
     <div className="flex h-screen items-center justify-center flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto p-6">
-        <Calculator />
-        <Outlet />
+      <Calculator />
       </main>
       <Footer />
     </div>

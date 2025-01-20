@@ -14,16 +14,20 @@
     "@remix-run/node": "^2.15.2",
     "@remix-run/react": "^2.15.2",
     "@remix-run/serve": "^2.15.2",
+    "better-react-mathjax": "^2.0.4-beta1",
     "chart.js": "^4.4.7",
     "frontend": "file:",
     "isbot": "^4.1.0",
+    "katex": "^0.16.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-katex": "^3.0.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.15.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "@types/react-katex": "^3.0.4",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10.4.19",
