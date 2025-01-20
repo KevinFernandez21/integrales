@@ -2,7 +2,7 @@ import { useState } from "react";
 import MathKeyboard from "./MathKeyboard";
 import Latex from "./Latex";
 import KaTeXRenderer  from "./KaTeXRenderer";
-
+import {Outlet } from "@remix-run/react";
 export default function Calculator() {
   const [input, setInput] = useState<string>("");
   const [methods, setMethods] = useState<string[] | null>(null);
@@ -18,7 +18,7 @@ export default function Calculator() {
 
   const fetchMethods = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/methods", {
+      const response = await fetch("https://tight-lexis-safenest-83078a32.koyeb.app/api/methods", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ expression: input, variable: "x" }),
@@ -36,7 +36,7 @@ export default function Calculator() {
 
   const fetchResult = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/solve", {
+      const response = await fetch("https://tight-lexis-safenest-83078a32.koyeb.app/api/solve", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ expression: input, variable: "x" }),
@@ -60,6 +60,7 @@ export default function Calculator() {
   return (
     <div className="flex flex-col lg:flex-row gap-8 p-8 max-w-7xl mx-auto">
       {/* Calculadora */}
+      
       <div className="bg-white text-gray-800 p-8 rounded-lg shadow-md w-full lg:w-1/3">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Calculadora Matemática con IA
@@ -82,7 +83,7 @@ export default function Calculator() {
           Calcular
         </button>
       </div>
-
+      <Outlet/>
       {/* Resultados */}
       <div className="bg-gray-100 text-gray-800 p-8 rounded-lg shadow-md w-full lg:w-2/3">
         <h2 className="text-2xl font-bold mb-4 text-center">Resultados</h2>
