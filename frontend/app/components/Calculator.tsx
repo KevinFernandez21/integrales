@@ -18,7 +18,7 @@ export default function Calculator() {
 
   const fetchMethods = async () => {
     try {
-      const response = await fetch("https://tight-lexis-safenest-83078a32.koyeb.app/api/methods", {
+      const response = await fetch("https://interior-aveline-orangecorp-dd5a7f8f.koyeb.app/api/methods", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ expression: input, variable: "x" }),
@@ -36,7 +36,7 @@ export default function Calculator() {
 
   const fetchResult = async () => {
     try {
-      const response = await fetch("https://tight-lexis-safenest-83078a32.koyeb.app/api/solve", {
+      const response = await fetch("https://interior-aveline-orangecorp-dd5a7f8f.koyeb.app/api/solve", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ expression: input, variable: "x" }),
