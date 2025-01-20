@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Cambia al dominio del frontend
+    allow_origins=["http://localhost:5173","https://integrales-ten.vercel.app/"],  # Cambia al dominio del frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

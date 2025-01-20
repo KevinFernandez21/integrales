@@ -14,7 +14,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/graph" className="hover:underline">
+          <Link to="/about" className="hover:underline">
             ¿Quienes somos?
           </Link>
         </li>
